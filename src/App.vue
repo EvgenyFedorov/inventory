@@ -1,17 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <UlList v-bind="{inventory}"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import UlList from "./components/UlList";
+//import UlList2 from "./components/UlList2";
 
 export default {
   name: 'App',
+  data: () => ({
+    inventory: {
+      setting: {
+        widthColumn: 70,
+        heightColumn: 70,
+        rows: 7,
+        columns: 5,
+      },
+      items: [
+        {key: 2, title: "Яблоко"},
+        {key: 8, title: "Банан"},
+        {key: 25, title: "Груша"},
+        {key: 26, title: "Вишня"},
+        {key: 34, title: "Ананас"},
+      ]
+    }
+  }),
   components: {
-    HelloWorld
+    UlList,
+    //UlList2,
   }
 }
 </script>
