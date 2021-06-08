@@ -1,5 +1,3 @@
-# game.loc
-
 ## Project setup
 ```
 npm install
